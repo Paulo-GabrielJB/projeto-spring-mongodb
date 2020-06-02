@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>br.com.curso</groupId>
-    <artifactId>spring-boot-monbodb</artifactId>
+    <artifactId>spring-boot-mongodb</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-monbodb</name>
     <description>Projeto Spring Boot com MongoDB</description>
