@@ -10,5 +10,6 @@ public interface UserService {
     User findById(String id);
     User insert(User obj);
     void delete(String id);
+    User update(String id, User obj);
 
 }

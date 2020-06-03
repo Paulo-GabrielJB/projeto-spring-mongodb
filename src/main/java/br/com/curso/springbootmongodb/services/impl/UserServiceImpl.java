@@ -37,4 +37,16 @@ public class UserServiceImpl implements UserService {
         userRepository.deleteById(id);
     }
 
+    @Override
+    public User update(String id, User obj) {
+        User newObj = findById(id);
+        updateDate(newObj, obj);
+        return null;
+    }
+
+    private void updateDate(User newObj, User obj) {
+        newObj.setEmail(obj.getEmail());
+        newObj.setName(obj.getName());
+    }
+
 }
