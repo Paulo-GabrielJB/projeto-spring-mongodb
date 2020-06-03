@@ -23,6 +23,6 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public List<Post> findByTitle(String text) {
-        return postRepository.findByTitleContainingIgnoreCase(text);
+        return postRepository.findByTitle(text);
     }
 }
