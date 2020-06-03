@@ -26,4 +26,9 @@ public class UserServiceImpl implements UserService {
                 .orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado"));
     }
 
+    @Override
+    public User insert(User obj) {
+        return userRepository.insert(obj);
+    }
+
 }

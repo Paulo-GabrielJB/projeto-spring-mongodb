@@ -1,5 +1,6 @@
 package br.com.curso.springbootmongodb.model.entities;
 
+import br.com.curso.springbootmongodb.model.dto.UserDTO;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -17,6 +18,12 @@ public class User implements Serializable {
     private String email;
 
     public User() {
+    }
+
+    public User(UserDTO user){
+        id = user.getId();
+        name = user.getName();
+        email = user.getEmail();
     }
 
     public User(String id, String name, String email) {
