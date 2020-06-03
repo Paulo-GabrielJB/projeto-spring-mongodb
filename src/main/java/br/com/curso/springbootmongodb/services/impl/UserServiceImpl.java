@@ -31,4 +31,10 @@ public class UserServiceImpl implements UserService {
         return userRepository.insert(obj);
     }
 
+    @Override
+    public void delete(String id) {
+        findById(id);
+        userRepository.deleteById(id);
+    }
+
 }

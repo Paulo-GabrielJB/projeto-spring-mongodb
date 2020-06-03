@@ -9,5 +9,6 @@ public interface UserService {
     List<User> findAll();
     User findById(String id);
     User insert(User obj);
+    void delete(String id);
 
 }
