@@ -1,6 +1,7 @@
 package br.com.curso.springbootmongodb.resources;
 
 import br.com.curso.springbootmongodb.model.dto.UserDTO;
+import br.com.curso.springbootmongodb.model.entities.Post;
 import br.com.curso.springbootmongodb.model.entities.User;
 import br.com.curso.springbootmongodb.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,12 @@ public class UserResource {
     public ResponseEntity<UserDTO> findById(@PathVariable("id") String id){
         User user = userService.findById(id);
         return ResponseEntity.ok().body(new UserDTO(user));
+    }
+
+    @GetMapping(value = "/{id}/posts")
+    public ResponseEntity<List<Post>> findPosts(@PathVariable("id") String id){
+        User user = userService.findById(id);
+        return ResponseEntity.ok().body(user.getPosts());
     }
 
     @PostMapping
